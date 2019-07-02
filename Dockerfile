@@ -9,8 +9,9 @@ RUN apt-get update -y; \
 
 # Download & install
 
- RUN git clone https://github.com/voutcn/megahit.git \
-  && cd megahit \
+ RUN git clone https://github.com/voutcn/megahit.git
+ 
+ RUN cd megahit \
   && mkdir -p build \
   && cd build \
   && cmake -DCMAKE_BUILD_TYPE=Release .. \
