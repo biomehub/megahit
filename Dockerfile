@@ -19,8 +19,8 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
   && make -j4 \
   && make install \
   && cd / \
-  && mkdir /opt/megahit
-  && mv megahit/build/* /opt/megahit
+  && mkdir /opt/megahit \
+  && mv megahit/build/* /opt/megahit \
   && rm -r megahit
 
 ENV PATH /opt/megahit:$PATH
