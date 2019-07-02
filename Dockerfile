@@ -7,8 +7,6 @@ RUN apt-get update -y; \
     apt-get install apt-utils wget git g++ make zlib1g-dev gzip bzip2 cmake python --no-install-recommends pkg-config -y; \
     apt-get clean
 
-RUN ln -s /usr/bin/python3 /usr/bin/python
-
 # Download & install
 
  RUN git clone https://github.com/voutcn/megahit.git \
