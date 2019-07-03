@@ -5,12 +5,11 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y; \
     apt-get install apt-utils wget git g++ make zlib1g-dev gzip bzip2 cmake python --no-install-recommends pkg-config -y; \
-    apt-get reinstall ca-certificates; \
     apt-get clean
 
 # Download & install
 
- RUN git clone https://github.com/voutcn/megahit.git
+ RUN git clone -c http.sslverify=false https://github.com/voutcn/megahit.git
  
  RUN cd megahit \
   && mkdir -p build \
